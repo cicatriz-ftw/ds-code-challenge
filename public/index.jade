@@ -1,6 +1,23 @@
 div#main
-	header
-	div#holder
-		h1 Coupons & Deals Near You
+	header#main-header
+	section#title
+		h1 Coupons & Deals near You
 		h2 +3,600 MATCHES FOUND
-		h3 test test
+	section#card-holder
+		ul.cards
+			li.card
+				header.card-header
+					p.city Bellevue, WA
+					p.range 3.3 mi
+				section.business-info
+					div.hero(style="background-image: url(assets/tile1-main.jpg);")
+					a.logo(style="background-image: url(assets/tile1-logo.jpg);")
+					h4 Nutritionists
+					a.business
+						h3 Sound Nourishment Nutritional Counseling
+				section.deals
+					ul
+						li 
+							p 20% off Regular Price for Cash-Paying Clients
+						li 
+							p Refer a Friend, Get 25% Off Next Visit
