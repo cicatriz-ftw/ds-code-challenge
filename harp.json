@@ -1,0 +1,8 @@
+{
+	"globals": {
+		"meta" :{
+			"title" : "Datasphere Code Challenge",
+			"desc"	: "A code challenge for datasphere"
+		}
+	}
+}
