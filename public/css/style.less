@@ -1,4 +1,49 @@
 @import "_normalize";
 
-body{
+@blueAccent: #097ab2;
+@darkGray: #343434;
+@mediumGray: #4d4d4d;
+@lightGray: #a6a6a6;
+
+body{}
+
+
+#main{
+	display: block;
+	height: 100%;
+	width: 750px;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+header{
+	height: 96px;
+	width: 100%;
+	background-color: @blueAccent;
+	background-image: url(../img/localsaver-logo.png);
+	background-repeat: no-repeat;
+	background-position: 50% 48%;
+	box-shadow: 0 1px 10px 1px rgba(0,0,0,0.2);
+}
+
+h1,h2{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: normal;
+}
+
+h1{
+	margin-top: 30px;
+	font-size: 4.4em;
+	line-height: 1.5em;
+	color: @mediumGray;
+
+}
+
+h2{
+	margin-top: 20px;
+	font-size: 1.8em;
+	letter-spacing: 0.1em;
+	color: @lightGray;
 }
