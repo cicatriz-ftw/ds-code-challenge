@@ -6,28 +6,29 @@ export default class Card extends Component{
 		city: '',
 		state: '',
 		category: '',
-		distance: ''
+		distance: '',
 	};
 
 	constructor(props, context) {
 		super(props, context);
-		console.log(props.business);
 	}
 
 	componentDidMount(){
+		this.setState(this.props.business);
 	}
 
 	render(){
+		let {state, city, category, distance} = this.state;
 		return (
 			<li className='card'>
 				<header className='card-header'>
-					<p className='city'>Bellevue, WA </p>
-					<p className='range'>3.3 mi </p>
+					<p className='city'>{city}, {state} </p>
+					<p className='range'>{distance} </p>
 				</header>
 				<section className='business-info'>
 					<div className='hero'></div>
 					<a className='logo'></a>
-					<h4>Nutritionists</h4>
+					<h4>{category}</h4>
 					<a className='business'></a>
 					<h3>Sound Nourishment Nutritional Counseling</h3>
 				</section>
