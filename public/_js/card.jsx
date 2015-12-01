@@ -7,6 +7,7 @@ export default class Card extends Component{
 		state: '',
 		category: '',
 		distance: '',
+		businessname: '',
 	};
 
 	constructor(props, context) {
@@ -18,7 +19,9 @@ export default class Card extends Component{
 	}
 
 	render(){
-		let {state, city, category, distance} = this.state;
+		let {state, city, category, distance, businessname} = this.state;
+		let logoImg = {backgroundImage: 'url(assets/tile1-logo.jpg)'};
+		let mainImg = {backgroundImage: 'url(assets/tile1-main.jpg)'};
 		return (
 			<li className='card'>
 				<header className='card-header'>
@@ -26,11 +29,13 @@ export default class Card extends Component{
 					<p className='range'>{distance} </p>
 				</header>
 				<section className='business-info'>
-					<div className='hero'></div>
-					<a className='logo'></a>
+					<div className='hero' style={mainImg}></div>
+					<a className='logo' style={logoImg}></a>
 					<h4>{category}</h4>
-					<a className='business'></a>
-					<h3>Sound Nourishment Nutritional Counseling</h3>
+					<a className='business'>
+						<h3>{businessname}</h3>
+					</a>
+
 				</section>
 				<Deals />
 			</li>
