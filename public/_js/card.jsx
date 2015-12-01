@@ -11,6 +11,7 @@ export default class Card extends Component{
 
 	constructor(props, context) {
 		super(props, context);
+		console.log(props.business);
 	}
 
 	componentDidMount(){

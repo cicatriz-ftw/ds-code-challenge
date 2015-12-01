@@ -6,6 +6,7 @@ export default class App extends Component{
     state = {
         title:'Coupons & Deals near You',
         subtitle: '+3,600 MATCHES FOUND',
+        businesses: []
     };
 
     constructor(props, context) {
@@ -15,11 +16,14 @@ export default class App extends Component{
     componentDidMount(){
         //WASNT ABLE TO GET CORS REQUEST SO I'M STORING THE DATA LOCALLY
         ajax('/data.json').then((data) => {
-
+            this.setState({businesses: data.businesses});
         });
     }
 
     render(){
+        let businessList = this.state.businesses.map(function(item){
+            return(<Card business={item} />)
+        });
         return (
             <div id='main'>
                 <header id='main-header'></header>
@@ -29,7 +33,7 @@ export default class App extends Component{
                 </section>
                 <section id='card-holder'>
                     <ul className='cards'>
-                        <Card />
+                        {businessList}
                     </ul>
                 </section>
             </div>
